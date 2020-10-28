@@ -7,13 +7,11 @@ import allure
 import pytest
 
 from core.Calc import Calc
+from tests.base import Base
 
 
 @allure.feature("除法测试用例")
-class TestCalcDiv:
-
-    def setup_class(self):
-        self.calc = Calc()
+class TestCalcDiv(Base):
 
     @allure.story("正常整数")
     @pytest.mark.parametrize("a, b, exp", [
@@ -81,9 +79,6 @@ class TestCalcDiv:
 @allure.feature("乘法测试用例")
 class TestCalcMul:
 
-    def setup_class(self):
-        self.calc = Calc()
-
     @allure.story("正常整数和0")
     @pytest.mark.parametrize("a, b, exp", [
         (1, 2, 2),
@@ -143,9 +138,6 @@ class TestCalcMul:
 
 @allure.feature("混合场景,流程示例")
 class TestCalcMix:
-
-    def setup_class(self):
-        self.calc = Calc()
 
     @allure.story("先除后乘")
     def test_mix1(self):
