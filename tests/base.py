@@ -1,4 +1,4 @@
-from core.Calc import Calc
+from core.calc import Calc
 
 
 class Base:

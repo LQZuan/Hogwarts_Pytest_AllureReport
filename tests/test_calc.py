@@ -6,7 +6,7 @@
 import allure
 import pytest
 
-from core.Calc import Calc
+from core.calc import Calc
 from tests.base import Base
 
 
